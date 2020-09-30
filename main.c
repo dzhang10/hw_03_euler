@@ -24,7 +24,16 @@ double sum_of_multiple(){
 numbers and the square of the sum. */
 
 double difference_of_square(){
+	double sum_of_square;
+	double square_of_sum;
 
+	int addend;
+	for(addend=1; addend <= 100; addend++){
+		sum_of_square+= addend*addend;
+		square_of_sum+=addend;
+	}
+
+	return (square_of_sum * square_of_sum) - sum_of_square;
 
 }
 
@@ -35,6 +44,8 @@ int main(){
 	double sum = sum_of_multiple();
 	printf("Problem 1: %0.0lf\n",sum);
 
+	double difference = difference_of_square();
+	printf("Problem 6: %0.0lf\n",difference);
 
 	return 0;
 }
